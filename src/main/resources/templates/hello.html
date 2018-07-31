@@ -8,6 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-<h1 th:text = "${'hello'+person.name+'from'+person.from}">Hello</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>todo</th>
+    </tr>
+
+    <th:block th:each="task : ${tasks}">
+        <tr>
+            <td th:text="${task.getId()}"></td>
+            <td th:text="${task.getContent()}"></td>
+        </tr>
+    </th:block>
+
+</table>
 </body>
 </html>
