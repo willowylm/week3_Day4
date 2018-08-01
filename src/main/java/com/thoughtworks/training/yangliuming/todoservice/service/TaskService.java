@@ -12,7 +12,10 @@ public class TaskService {
     @Autowired
     private TodoList todoList;
 
-    public List<Task> find() {
+    public List<Task> getList() {
+        System.out.println("kmj--------222");
+        System.out.println("kmj--------222"+todoList.list());
+
         return todoList.list();
     }
 }

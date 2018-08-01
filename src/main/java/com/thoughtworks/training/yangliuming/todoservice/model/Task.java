@@ -1,13 +1,24 @@
 package com.thoughtworks.training.yangliuming.todoservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import groovy.transform.builder.Builder;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Task {
     private String id;
     private String content;
 
-    public Task(String id, String content) {
-        this.id = id;
-        this.content = content;
+    @JsonProperty
+    boolean complete() {
+        return false;
     }
+
 
     public String getId(){
         return id;
