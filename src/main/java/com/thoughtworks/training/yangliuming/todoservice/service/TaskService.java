@@ -13,10 +13,11 @@ public class TaskService {
     private TodoList todoList;
 
     public List<Task> getList() {
-        System.out.println("kmj--------222");
-        System.out.println("kmj--------222"+todoList.list());
+        return todoList.findAll();
+    }
 
-        return todoList.list();
+    public void create(Task task) {
+        todoList.save(task);
     }
 }
 
